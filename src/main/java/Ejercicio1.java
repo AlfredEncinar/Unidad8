@@ -15,6 +15,7 @@ public class Ejercicio1 {
     public static void main(String[] args) {
 
         // Crear la ventana y los componentes
+
         JFrame ventana = new JFrame("Calcular Área");
         JLabel etiquetaBase = new JLabel("Introduce la base del triángulo:");
         JLabel etiquetaAltura = new JLabel("Introduce la altura del triángulo:");
@@ -23,6 +24,7 @@ public class Ejercicio1 {
         JButton botonCalcular = new JButton("Calcular");
 
         // Añadir los componentes a la ventana
+
         ventana.getContentPane().setLayout(new BoxLayout(ventana.getContentPane(), BoxLayout.Y_AXIS));
         ventana.getContentPane().add(etiquetaBase);
         ventana.getContentPane().add(campoBase);
@@ -31,6 +33,7 @@ public class Ejercicio1 {
         ventana.getContentPane().add(botonCalcular);
 
         // Configurar la acción del botón Calcular
+
         botonCalcular.addActionListener(e -> {
             double base = Double.parseDouble(campoBase.getText());
             double altura = Double.parseDouble(campoAltura.getText());
@@ -39,6 +42,7 @@ public class Ejercicio1 {
         });
 
         // Configurar la ventana y mostrarla
+
         ventana.pack();
         ventana.setLocationRelativeTo(null);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
